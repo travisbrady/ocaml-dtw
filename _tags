@@ -1,0 +1,37 @@
+# OASIS_START
+# DO NOT EDIT (digest: 6f17fea17b1d2eb28c95b23b762fbe2d)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library dtw
+"src/dtw.cmxs": use_dtw
+<src/*.ml{,i}>: oasis_library_dtw_ccopt
+"src/deque.c": oasis_library_dtw_ccopt
+"src/dtw_stubs.c": oasis_library_dtw_ccopt
+"src/ucr_dtw.c": oasis_library_dtw_ccopt
+"src/dtw.cmxa": use_libdtw_stubs
+<src/*.ml{,i}>: pkg_bigarray
+"src/deque.c": pkg_bigarray
+"src/dtw_stubs.c": pkg_bigarray
+"src/ucr_dtw.c": pkg_bigarray
+# Executable dtw_test
+"examples/dtw_test.native": use_dtw
+"examples/dtw_test.native": pkg_bigarray
+# Executable dtw_file_query
+"examples/dtw_file_query.native": use_dtw
+"examples/dtw_file_query.native": pkg_bigarray
+"examples/dtw_file_query.native": pkg_str
+<examples/*.ml{,i}>: use_dtw
+<examples/*.ml{,i}>: pkg_bigarray
+<examples/*.ml{,i}>: pkg_str
+# OASIS_STOP

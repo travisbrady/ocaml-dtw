@@ -1,0 +1,35 @@
+OASISFormat: 0.3
+Name:        ucr_dtw
+Version:     0.1
+Synopsis:    dtw
+Authors:     Travis Brady
+License:     MIT
+Plugins:     META (0.3)
+
+Library dtw
+  Path:             src
+  FindlibName:      dtw
+  BuildTools:       ocamlbuild
+  BuildDepends:     bigarray
+  CompiledObject:   native
+  Modules:          Dtw
+  CSources:         deque.c,deque.h,dtw_stubs.c,ucr_dtw.c,ucr_dtw.h
+  DataFiles:        ucr_dtw.h ($prefix/include/ocaml_ucr_dtw),
+                    dtw_stubs.h ($prefix/include/ocaml_ucr_dtw)
+  CCOpt:            -lm
+
+Executable dtw_test
+  Path:             examples
+  BuildTools:       ocamlbuild
+  BuildDepends:     bigarray,dtw
+  CompiledObject:   native
+  MainIs:           dtw_test.ml
+  Install:          false
+
+Executable dtw_file_query
+  Path:             examples
+  BuildTools:       ocamlbuild
+  BuildDepends:     bigarray,str,dtw
+  CompiledObject:   native
+  MainIs:           dtw_file_query.ml
+  Install:          false

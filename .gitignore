@@ -1,0 +1,13 @@
+*.o
+*.so
+*.a
+*.cmi
+*.cma
+*.cmx
+*.cmxs
+*.cmo
+*.native
+_build
+data
+*.log
+setup.data
