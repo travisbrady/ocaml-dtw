@@ -5,7 +5,9 @@ OCaml Bindings to [Libdtw](https://github.com/b/libdtw) which is itself a fork o
 Only a single function `ucr_query` is available which can be called like so:
 
 ```ocaml
-(* query is our needle and data the haystack. r is the warping constraint which must be between 0 and 1 *)
+(* query is our needle 
+ * data the haystack. 
+ * r is the warping constraint which must be between 0 and 1 *)
 let dist,idx = Dtw.ucr_query query data r in
 Printf.printf "Dist: %f Idx: %d\n" dist idx;
 ```
