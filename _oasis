@@ -11,7 +11,7 @@ Library dtw
   FindlibName:      dtw
   BuildTools:       ocamlbuild
   BuildDepends:     bigarray
-  CompiledObject:   native
+  CompiledObject:   best
   Modules:          Dtw
   CSources:         deque.c,deque.h,dtw_stubs.c,ucr_dtw.c,ucr_dtw.h
   DataFiles:        ucr_dtw.h ($prefix/include/ocaml_ucr_dtw),

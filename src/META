@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 1d058e3b84d7cb5025869b1d582a2166)
+# DO NOT EDIT (digest: b78336ea2a23badf94c5539fc894febd)
 version = "0.1"
 description = "dtw"
 requires = "bigarray"
@@ -7,6 +7,6 @@ archive(byte) = "dtw.cma"
 archive(byte, plugin) = "dtw.cma"
 archive(native) = "dtw.cmxa"
 archive(native, plugin) = "dtw.cmxs"
-exists_if = "dtw.cmxa"
+exists_if = "dtw.cma"
 # OASIS_STOP
 
